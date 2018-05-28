@@ -12,3 +12,14 @@ For example:
 ```
 terraform apply -var 'key_name=mykey' -var 'public_key_path=/home/vagrant/.ssh/mykey1.pub'
 ```
+
+#Automation of NGINX Config using Ansible
+
+Run the Ansible playbook nginx.yml to configure NGINX like this:
+
+
+for example:
+
+```
+ansible-playbook nginx.yml
+``` 
