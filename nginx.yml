@@ -1,0 +1,18 @@
+---
+- hosts: webservers
+  sudo: yes
+  tasks:
+    - name: Copy helloworld index.html
+      copy: src=index.html dest=/usr/share/nginx/html mode=0644 owner=root group=root
+
+    - name: Copy SSL configuration
+      copy: src=ssl.conf dest=/etc/nginx/conf.d mode=0644 owner=root group=root 
+    #  notify: 
+    #     - Restart nginx
+
+    - name: Copy Default Config in Sites-Enabled
+      copy: src=default dest=/etc/nginx/sites-available mode=0644 owner=root group=root
+    
+
+    - name: Restart Nginx
+      service: name=nginx state=restarted
