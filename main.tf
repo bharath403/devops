@@ -25,7 +25,7 @@ resource "aws_security_group" "default" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
- 
+
   ingress {
     from_port   = 443
     to_port     = 443
@@ -55,13 +55,13 @@ resource "aws_instance" "web" {
     user = "ubuntu"
     type = "ssh"
     agent = false
-    private_key = "${file("/home/vagrant/.ssh/mykey1.pem")}"
+    private_key = "${file("/Users/bpoosa691/.ssh/id_rsa")}"
     timeout = "10m"
 
     # The connection will use the local SSH agent for authentication.
   }
 
-  instance_type = "t2.micro"
+  instance_type = "t2.large"
 
   # Lookup the correct AMI based on the region
   # we specified
@@ -89,4 +89,3 @@ resource "aws_instance" "web" {
     ]
   }
 }
-
