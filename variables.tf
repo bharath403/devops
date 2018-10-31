@@ -10,6 +10,7 @@ DESCRIPTION
 
 variable "key_name" {
   description = "Desired name of AWS key pair"
+  default     = "my_key"
 }
 
 variable "aws_region" {
