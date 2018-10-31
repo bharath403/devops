@@ -5,7 +5,7 @@ Ensure this keypair is added to your local SSH agent so provisioners can
 connect.
 Example: ~/.ssh/terraform.pub
 DESCRIPTION
-  default = ~/.ssh/id_rsa.pub
+  default = ~/.ssh/terraform.pub
 }
 
 variable "key_name" {
