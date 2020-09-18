@@ -1,4 +1,4 @@
-# This Terraform script will Provision EC2 instance, create new EC2 key pair and Security Group and Install Nginx 
+# This Terraform script will Provision EC2 instance, create new EC2 key pair and Security Group, Install Nginx and configure SSL
 
 Run with a command like this:
 
